@@ -1,0 +1,39 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity ulaRV is
+  generics (WSIZE : natural := 32);
+  port (
+    opcode : in std_logic(3 downto 0)
+    A, B : in std_logic_vector(WSIZE-1 downto 0);
+    Z : out std_logic_vector(WSIZE-1 downto 0)
+    cond : out std_logic);
+end ulaRV;
+
+architecture arquiteturaULA of ulaRV is
+  
+  signal a32 : std_logic_vector(31 downto 0);
+
+  begin
+    Z <= a32;
+    proc_ula: process(A, B, opcode, a32) begin
+      if (a32 = X"00000000") then zero <= '1'; else zero <= '0'; end if;
+        case opcode is
+          when ADD_OP => a32 <= std_logic_vector(signed(A) + signed(B));
+          when SUB_OP => a32 <= std_logic_vector(signed(A) - signed(B));
+          when AND_OP => a32 <= A and B;
+          when OR_OP  => a32 <= A or B;
+          when XOR_OP => a32 <= A xor B;
+          when SLL_OP => a32 <= A << B;
+          when SRL_OP => a32 <= A >> B;
+          when SRA_OP => a32 <= std_logic_vector(signed(A)) >> B;
+          when SLT_OP => a32 <= (A < B) ? X"00000001" : X"00000000";
+          when SLTU_OP => a32 <= (A < B) ? X"00000001" : X"00000000"; 
+          when SGE_OP => a32 <= (A > B) ? X"00000001" : X"00000000";
+          when SGEU_OP => a32 <= (A > B) ? X"00000001" : X"00000000";
+          when SEQ_OP => a32 <= (A = B) ? X"00000001" : X"00000000";
+          when SNE_OP => a32 <= (A != B) ? X"00000001" : X"00000000";
+      end case;
+  end process;
+end arquiteturaULA;

@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\derickandrade\Desktop\ComputerOrganizationAndDesignRISC-V\ULA\simulation\qsim
+vulaRISCV
+Z1 !s100 ^e0^Cdg2>MiBgi[J?8JMz3
+Z2 I<kQ9O1]jm]@Hk`dEQ097z1
+Z3 VYSX7UP[]^l3X=h>Rna9gJ2
+Z4 dC:\Users\derickandrade\Desktop\ComputerOrganizationAndDesignRISC-V\ULA\simulation\qsim
+Z5 w1736989114
+Z6 8ulaRISCV.vo
+Z7 FulaRISCV.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|ulaRISCV.vo|
+Z10 o-work work -O0
+Z11 nula@r@i@s@c@v
+!i10b 1
+!s85 0
+Z12 !s108 1736989115.561000
+Z13 !s107 ulaRISCV.vo|
+!s101 -O0
+vulaRISCV_vlg_check_tst
+!i10b 1
+Z14 !s100 0GS?YgL<`FjzBV_3`lBD01
+Z15 IeB3Kh3NFZ84>B0G?[YHGj1
+Z16 VO<zd=<?DaGj5M6WIXFll[1
+R4
+R5
+Z17 8ulaRISCV.vt
+Z18 FulaRISCV.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z19 !s108 1736989115.685000
+Z20 !s107 ulaRISCV.vt|
+Z21 !s90 -work|work|ulaRISCV.vt|
+!s101 -O0
+R10
+Z22 nula@r@i@s@c@v_vlg_check_tst
+vulaRISCV_vlg_sample_tst
+!i10b 1
+Z23 !s100 ]YDHCaF:;IClk<SYMhJiK1
+Z24 ID1ZL0^WFPz[=9A_:mRlP@1
+Z25 VEFMUbSKZi@_7M@oYgd>DL1
+R4
+R5
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z26 nula@r@i@s@c@v_vlg_sample_tst
+vulaRISCV_vlg_vec_tst
+!i10b 1
+!s100 T?e2Yj@m4=B@@hkoC>ho;1
+I=RXd1dEF0AVK1WB?jXX:10
+Z27 VG2VLe:TAcJ98]]@cb?PdM1
+R4
+R5
+R17
+R18
+Z28 L0 767
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z29 nula@r@i@s@c@v_vlg_vec_tst
