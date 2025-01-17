@@ -1,5 +1,5 @@
 Flow report for ulaRISCV
-Wed Jan 15 21:58:34 2025
+Thu Jan 16 21:10:58 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,13 +40,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Wed Jan 15 21:58:34 2025           ;
+; Flow Status                        ; Successful - Thu Jan 16 21:10:58 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ulaRISCV                                        ;
 ; Top-level Entity Name              ; ulaRISCV                                        ;
 ; Family                             ; Cyclone IV GX                                   ;
-; Total logic elements               ; 704 / 21,280 ( 3 % )                            ;
-;     Total combinational functions  ; 704 / 21,280 ( 3 % )                            ;
+; Total logic elements               ; 735 / 21,280 ( 3 % )                            ;
+;     Total combinational functions  ; 735 / 21,280 ( 3 % )                            ;
 ;     Dedicated logic registers      ; 0 / 21,280 ( 0 % )                              ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 102 / 167 ( 61 % )                              ;
@@ -68,25 +68,28 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/15/2025 21:49:43 ;
+; Start date & time ; 01/16/2025 21:10:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ulaRISCV            ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                 ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 269058765682231.173698858311548 ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --         ;
-; VHDL_INPUT_VERSION                  ; VHDL_2008                       ; VHDL_1993     ; --          ; --         ;
-; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                             ; --            ; --          ; --         ;
-+-------------------------------------+---------------------------------+---------------+-------------+------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 269058765682231.173707260813720 ; --            ; --          ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                              ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
+; VHDL_INPUT_VERSION                  ; VHDL_2008                       ; VHDL_1993     ; --          ; --             ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                             ; --            ; --          ; --             ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -94,15 +97,14 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4679 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:08     ; 1.0                     ; 5012 MB             ; 00:00:08                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4599 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4618 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4580 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:16     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4679 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:00:12     ; 1.0                     ; 5020 MB             ; 00:00:10                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4599 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 4617 MB             ; 00:00:05                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4560 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4568 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4573 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:28     ; --                      ; --                  ; 00:00:23                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,7 +120,6 @@ applicable agreement for further details.
 ; EDA Netlist Writer        ; DERICK           ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; DERICK           ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; DERICK           ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DERICK           ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -129,8 +130,7 @@ quartus_map --read_settings_files=on --write_settings_files=off ulaRISCV -c ulaR
 quartus_fit --read_settings_files=off --write_settings_files=off ulaRISCV -c ulaRISCV
 quartus_asm --read_settings_files=off --write_settings_files=off ulaRISCV -c ulaRISCV
 quartus_sta ulaRISCV -c ulaRISCV
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ulaRISCV -c ulaRISCV --vector_source=C:/Users/derickandrade/Desktop/ComputerOrganizationAndDesignRISC-V/ULA/Waveform.vwf --testbench_file=./simulation/qsim/ulaRISCV.vt
-quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ulaRISCV -c ulaRISCV
+quartus_eda --read_settings_files=off --write_settings_files=off ulaRISCV -c ulaRISCV
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ulaRISCV -c ulaRISCV --vector_source=C:/Users/derickandrade/Desktop/ComputerOrganizationAndDesignRISC-V/ULA/Waveform.vwf --testbench_file=./simulation/qsim/ulaRISCV.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ulaRISCV -c ulaRISCV
 

@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 96 168 264 184)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "op[3..0]" (rect 5 0 43 12)(font "Arial" ))
+	(text "op[3..0]" (rect 5 0 42 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -39,7 +39,7 @@ applicable agreement for further details.
 	(input)
 	(rect 96 184 264 200)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "numa[31..0]" (rect 5 0 65 12)(font "Arial" ))
+	(text "numa[31..0]" (rect 5 0 64 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -55,7 +55,7 @@ applicable agreement for further details.
 	(input)
 	(rect 96 200 264 216)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "numb[31..0]" (rect 5 0 65 12)(font "Arial" ))
+	(text "numb[31..0]" (rect 5 0 64 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -169,5 +169,5 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 168 96))
 	)
-	(annotation_block (parameter)(rect 264 112 448 144))
+	(annotation_block (parameter)(rect 448 112 632 144))
 )

@@ -17,8 +17,8 @@
 # Loading work.ulaRISCV_vlg_vec_tst
 # Loading work.ulaRISCV
 # Loading cycloneiv_ver.cycloneiv_lcell_comb
-# Loading cycloneiv_ver.cycloneiv_io_ibuf
 # Loading cycloneiv_ver.cycloneiv_io_obuf
+# Loading cycloneiv_ver.cycloneiv_io_ibuf
 # Loading work.ulaRISCV_vlg_sample_tst
 # Loading work.ulaRISCV_vlg_check_tst
 # Simulation passed !
