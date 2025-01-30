@@ -16,14 +16,14 @@ component XREGS is
       ro1, ro2: out std_logic_vector(WSIZE-1 downto 0));
 end component;
 
-	  signal clk_tb : std_logic 					             := '0';
-    signal wren_tb : std_logic 					           := '0';
-    signal rs1_tb : std_logic_vector(4 downto 0)   := (others  => '0');
-    signal rs2_tb : std_logic_vector(4 downto 0)   := (others  => '0');
-    signal rd_tb : std_logic_vector(4 downto 0)    := (others  => '0');
-    signal ro1_tb : std_logic_vector(31 downto 0)  := (others  => '0');
-    signal ro2_tb : std_logic_vector(31 downto 0)  := (others  => '0');
-    signal data_tb : std_logic_vector(31 downto 0) := (others  => '0');    
+signal clk_tb : std_logic 		       := '0';
+signal wren_tb : std_logic 		       := '0';
+signal rs1_tb : std_logic_vector(4 downto 0)   := (others  => '0');
+signal rs2_tb : std_logic_vector(4 downto 0)   := (others  => '0');
+signal rd_tb : std_logic_vector(4 downto 0)    := (others  => '0');
+signal ro1_tb : std_logic_vector(31 downto 0)  := (others  => '0');
+signal ro2_tb : std_logic_vector(31 downto 0)  := (others  => '0');
+signal data_tb : std_logic_vector(31 downto 0) := (others  => '0');    
 
 begin
 	
@@ -39,7 +39,7 @@ begin
     process
       begin       
       data_tb <= X"AAAAAAAA";	-- dado para escrever
-      rd_tb 	<= "00101"; 	  -- no registrador 5
+      rd_tb   <= "00101"; 	  -- no registrador 5
       wren_tb <= '1'; 			  -- habilita o sinal de escrita
       wait for 1 ns;
 
@@ -50,7 +50,7 @@ begin
       wait for 1 ns;    
 
       data_tb <= X"BBBBBBBB";
-      rd_tb 	<= "00111";		-- escreve no reg 7
+      rd_tb   <= "00111";		-- escreve no reg 7
       -- sinal de escrita continua ativo
 
       wait for 1 ns;
@@ -59,8 +59,8 @@ begin
 
       wait for 1 ns;
       wren_tb <= '0';			-- desativa sinal de escrita
-      rs1_tb 	<= "00101";	
-      rs2_tb 	<= "00111";		-- para ler os registradores 5 e 7	
+      rs1_tb  <= "00101";	
+      rs2_tb  <= "00111";		-- para ler os registradores 5 e 7	
 
       wait for 1 ns;
 
@@ -71,13 +71,13 @@ begin
 
       wait for 1 ns;
 
-      clk_tb 	<= '0';
+      clk_tb  <= '0';
       wren_tb <= '1';
 
       wait for 1 ns;
 
-      data_tb 	<= X"FFFFFFFF"; -- tentativa de escrever no registrador 0
-      rd_tb 	<= "00000";
+      data_tb <= X"FFFFFFFF"; -- tentativa de escrever no registrador 0
+      rd_tb   <= "00000";
 
       wait for 1 ns;
 
@@ -85,13 +85,13 @@ begin
 
       wait for 1 ns;
 
-      clk_tb 	<= '0';
+      clk_tb  <= '0';
       wren_tb <= '0';
 
       wait for 1 ns;
 
-      rs1_tb 	<= "00000";
-      rs2_tb 	<= "00000"; -- verificação do que está guardado no reg 0
+      rs1_tb  <= "00000";
+      rs2_tb  <= "00000"; -- verificação do que está guardado no reg 0
 
       wait for 1 ns;
 
