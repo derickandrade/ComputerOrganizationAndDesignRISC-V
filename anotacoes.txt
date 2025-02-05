@@ -1,0 +1,117 @@
+Classes
+
+
+Pessoa
+Possui os parâmetros:
+nome: nome da pessoa;
+cpf: CPF da pessoa;
+email: e-mail da pessoa;
+telefone: telefone da pessoa.
+
+======================================
+
+Cliente
+Herda de Pessoa e possui os parâmetros:
+debito: o débito que o cliente possui com a loja;
+veiculos: um array list de objetos Veiculo que o cliente possui cadastrados na loja;
+totalPago: acumulador do total pago pelo cliente para obter o bônus previsto nas regras de negócio;
+idsLivres: é uma priority queue que o primeiro id cadastrado nessa lista fica disponível para ser reutilizado;
+idGenerator: atributo static da classe que define o maior ID disponível, que será utilizado caso a fila de ID's livres esteja vazia.
+
+
+Além de construtores, getters e setters, possui as funções:
+
+addIdLivre: recebe como parâmetro o ID do cliente que foi excluído e o adiciona na lista de ID's livres.
+
+getVeiculoByID: recebe como parâmetro o índice do veículo que será retornado pela função.
+
+excluirVeiculo: recebe como parâmetro o objeto Veiculo e exclui este.
+
+excluirVeiculos: exclui todos os veículos do cliente.
+
+======================================
+
+Funcionario
+Herda de Pessoa e possui os parâmetros:
+salario: o salário do funcionário;
+servicosFeitos: a quantidade de serviços realizados pelo funcionário;
+admin: valor booleano que indica se o funcionário tem privilégios de administrador no aplicativo;
+senha: a senha que o funcionário usa para fazer login;
+servicosAtivos: hashmap dos servicos que o funcionário tem para serem realizados;
+idsLivres: mesma lógica de Cliente;
+idGenerator: mesma lógica de Cliente;
+
+
+Além de construtores, getters e setters, possui as funções:
+
+completaServico: recebe um objeto Servico como parâmetro, se o serviço estiver pago, tira o servico da lista de serviços ativos e incrementa o atributo de serviços feitos.
+
+pegarPecasNoEstoque: recebe como parâmetro um objeto Servico. Pra cada peça com defeito no serviço, procura a peça no estoque. Caso não encontre, adiciona a peça ao array local de peças faltantes e automaticamente cadastra a peça ao estoque com quantidade zero. Caso encontre a peça cadastrada mas não tem a peça no estoque, adiciona a peça ao array de peças faltantes. Caso contrário, remove uma unidade da peça do estoque. Retorna as peças faltantes.
+
+consertarVeiculo: recebe como parâmetros um objeto do tipo Servico e uma string que indica o método de pagamento. Da classe Servico, utiliza as funções de calcular valor, considerando o desconto do método de pagamento, a função que esvazia as peças com problema do veículo e a função que define o serviço como consertado.
+
+addIdLivre: mesma lógica de cliente.
+
+=======================================================
+=======================================================
+
+Telas
+
+Main
+
+
+Possui as funcionalidades:
+
+carregarTabelaServicos, carregarTabelaClientes, carregarTabelaFuncionarios, carregarTabelaPecas: preenche a respectiva tabela com os objetos cadastrados e as informações deles.
+
+Além das funcionalidades de abrir as janelas de cadastros e gerenciamentos de clientes, funcionários, serviços, peças e estoque.
+========================================================
+
+CadastroCliente
+
+
+Possui as funcionalidades:
+
+verificarCampos: implementa a função da interface de validação. Caso os campos de nome, CPF, e-mail ou telefone estejam vazios ou em branco, lança uma exceção de argumento ilegal com a mensagem "Todos os campos devem ser preenchidos.".
+
+jButtonCadastrarActionPerformed: tenta executar a função de verificar campos, caso não consiga, tem o tratamento de exceção de lançar uma mensagem de erro pedindo para que se preencha todos os campos. Em seguida, tenta executar a função verificaCPF de Objetos, caso não consiga lança a mensagem de erro que informa que o CPF já está cadastrado. Caso consiga, cria o objeto cliente e o adiciona na lista de clientes cadastrados, mostra a mensagem de cliente cadastrado com sucesso, fecha a tela e atualiza a tabela de clientes na tela principal.
+
+jButtonCancelarActionPerformed: retorna para a página inicial.
+=======================================================
+GerenciarClientes
+
+
+excluirPecaComProblema: tem um mouse listener na tabela de peças com problema que pode ser usado para apagar a peça com o botão direito do mouse.
+
+carregarTabelaClientes, carregarTabelaPecas: mesma lógica das funções da Main.
+
+selecionarVeiculo: puxa as informações do objeto selecionado na combobox para os campos do veículo.
+
+carregaVeiculos: caso o cliente possua algum veículo, carrega ele na combobox.
+
+jButtonPesquisarActionPerformed: redefine o estado da aplicação e tenta procurar o CPF informado. Caso não encontre, exibe uma mensagem de cliente não encontrado. Caso encontre, preenche os campos de cliente com as respectivas informações.
+
+jButtonEditarActionPerformed: faz a página entrar no estado de edição, habilitando uma flag, e deixa apenas os campos necessários habilitados.
+
+jButtonConfirmarActionPerformed: caso a flag de edição esteja habilitada, atribui todos os novos valores ao respectivo cliente que foi pesquisado.
+
+jButtonExcluirActionPerformed: primeiro pergunta se quer mesmo excluir o cliente, então se a resposta for sim, primeiro verifica se o cliente tem veículos, se tiver, verifica se o veículo tem peças com problema. Se tiver, apaga as peças com problema, então apaga os veículos do cliente. Adiciona o ID do cliente excluído à lista de ID's livres.
+
+jButtonCancelarActionPerformed: limpa todos campos e redefine para o estado inicial.
+
+Há todas essas funções tanto para os clientes, quanto para os veículos.
+======================================================
+CadastroFuncionario
+
+Possui as mesmas funcionalidades de CadastroCliente.
+======================================================
+GerenciarFuncionario
+
+Possui a flag do estado de edição, bem como um usuário do tipo Funcionario que pode ter privilégios de administrador.
+
+Possui as funcionalidades:
+
+carregarTabelaServicos: quando há algum funcionário pesquisado, preenche essa tabela com as respectivas informações.
+
+jButtonPesquisarActionPerformed, jButtonEditarActionPerformed, jButtonConfirmarActionPerformed, jButtonExcluirActionPerformed, jButtonCancelarActionPerformed: a mesma lógica de gerenciar clientes.
+
